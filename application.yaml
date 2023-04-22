@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/chinmoyd1/demo-node-app-k8.git
-    targetRevision: HEAD
+    targetRevision: master
     path: demo-node-app-k8
   destination:
     server: https://kubernetes.default.svc
