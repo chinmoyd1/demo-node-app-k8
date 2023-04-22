@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-node-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/chinmoyd1/demo-node-app-k8.git
+    targetRevision: HEAD
+    path: demo-node-app-k8
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true 
