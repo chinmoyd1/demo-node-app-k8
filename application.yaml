@@ -8,7 +8,6 @@ spec:
   source:
     repoURL: https://github.com/chinmoyd1/demo-node-app-k8.git
     targetRevision: master
-    path:
   destination:
     server: https://kubernetes.default.svc
     namespace: default
